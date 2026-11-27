@@ -1,8 +1,16 @@
-# Abux
+<p align="center">
+  <img src="build/icon.png" alt="Abux Logo" width="120" />
+</p>
 
-Klien SSH desktop profesional untuk mengelola server Anda sendiri: terminal, SFTP, GitHub, Deploy beranimasi, dan pengelola database. Dibangun dengan Electron, ssh2, dan xterm.js.
+<h1 align="center">Abux</h1>
 
-**Developer:** ABUL MAHASIN · **Lisensi:** [MIT](LICENSE)
+<p align="center">
+  Klien SSH desktop profesional untuk mengelola server Anda sendiri: terminal, SFTP, GitHub, Deploy beranimasi, dan pengelola database. Dibangun dengan Electron, ssh2, dan xterm.js.
+</p>
+
+<p align="center">
+  <strong>Developer:</strong> ABUL MAHASIN · <strong>Lisensi:</strong> <a href="LICENSE">MIT</a>
+</p>
 
 ## Fitur
 
