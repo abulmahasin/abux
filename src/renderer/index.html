@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://avatars.githubusercontent.com; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abux</title>
+  <link rel="stylesheet" href="../../node_modules/@xterm/xterm/css/xterm.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <nav id="activity" aria-label="Navigasi utama"></nav>
+
+    <aside id="sidebar">
+      <header id="side-head">
+        <h2 id="side-title"></h2>
+        <div id="side-actions"></div>
+      </header>
+      <div id="side-search-wrap"><input id="side-search" type="search" placeholder="Cari…" autocomplete="off" spellcheck="false" /></div>
+      <div id="side-banner" hidden></div>
+      <div id="side-body"></div>
+    </aside>
+
+    <main id="main">
+      <div id="tabbar">
+        <div id="tabs" role="tablist"></div>
+        <div id="tab-tools"></div>
+      </div>
+      <div id="workspace">
+        <div id="stage">
+          <div id="terminals"></div>
+          <div id="welcome">
+            <div class="welcome-card">
+              <div class="logo-mark" aria-hidden="true"></div>
+              <h1>Abux</h1>
+              <p>Kelola server Anda dengan aman. Pilih host di panel kiri untuk membuka sesi terminal, atau tambahkan host baru.</p>
+              <div class="welcome-actions">
+                <button class="btn primary" id="welcome-new-host">Tambah host</button>
+                <button class="btn" id="welcome-gen-key">Buat SSH key</button>
+                <button class="btn" id="welcome-help">Buka panduan</button>
+              </div>
+              <dl class="shortcuts">
+                <div><dt>Salin</dt><dd><kbd class="mod-copy"></kbd></dd></div>
+                <div><dt>Tempel</dt><dd><kbd class="mod-paste"></kbd></dd></div>
+                <div><dt>Cari di terminal</dt><dd><kbd class="mod-find"></kbd></dd></div>
+                <div><dt>Pindah tab</dt><dd><kbd>Ctrl</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd></dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <aside id="sftp-panel" hidden></aside>
+      </div>
+      <footer id="statusbar">
+        <span id="st-conn"><i class="dot idle"></i><span id="st-text">Tidak ada sesi</span></span>
+        <button id="st-deploy" class="st-deploy" type="button" hidden></button>
+        <span id="st-right"></span>
+      </footer>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="ctx-root"></div>
+
+  <script src="../../node_modules/@xterm/xterm/lib/xterm.js"></script>
+  <script src="../../node_modules/@xterm/addon-fit/lib/addon-fit.js"></script>
+  <script src="../../node_modules/@xterm/addon-web-links/lib/addon-web-links.js"></script>
+  <script src="../../node_modules/@xterm/addon-search/lib/addon-search.js"></script>
+  <script src="bridge.js"></script>
+  <script src="ui.js"></script>
+  <script src="templates.js"></script>
+  <script src="help-content.js"></script>
+  <script src="app.js"></script>
+  <script src="deploy.js"></script>
+  <script src="db.js"></script>
+  <script src="logview.js"></script>
+  <script src="server.js"></script>
+  <script src="redis.js"></script>
+  <script src="editor.js"></script>
+  <script src="cicd.js"></script>
+  <script src="help.js"></script>
+</body>
+</html>
